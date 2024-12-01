@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".tambah"
+    android:padding="40dp"
+    android:background="@color/cream">
+
+    <TextView
+        android:id="@+id/title_tambah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tambah Data"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:id="@+id/container"
+       android:layout_width="match_parent"
+       android:layout_height="600dp"
+       app:layout_constraintTop_toBottomOf="@+id/title_tambah"
+       app:layout_constraintStart_toStartOf="parent"
+       android:background="@drawable/rounded_blue"
+       android:padding="15dp"
+       android:layout_marginTop="20dp"
+       >
+
+       <TextView
+           android:id="@+id/label_nama_tambah"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="nama pemilih"
+           android:textColor="@color/black"
+           android:textSize="20sp"
+           app:layout_constraintTop_toTopOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+        />
+       <EditText
+           android:id="@+id/input_nama_tambah"
+           android:layout_width="match_parent"
+           android:layout_height="50dp"
+           android:background="@drawable/rounded_grey"
+           android:inputType="text"
+           android:textColor="@color/black"
+           app:layout_constraintTop_toBottomOf="@id/label_nama_tambah"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           android:layout_marginTop="10dp"/>
+
+       <TextView
+           android:id="@+id/label_nik_tambah"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="nik"
+           android:textColor="@color/black"
+           android:textSize="20sp"
+           app:layout_constraintTop_toBottomOf="@id/input_nama_tambah"
+           app:layout_constraintStart_toStartOf="parent"
+           android:layout_marginTop="20dp"/>
+       <EditText
+           android:id="@+id/input_nik_tambah"
+           android:layout_width="match_parent"
+           android:layout_height="50dp"
+           android:background="@drawable/rounded_grey"
+           android:inputType="text"
+           android:textColor="@color/black"
+           app:layout_constraintTop_toBottomOf="@id/label_nik_tambah"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           android:layout_marginTop="10dp"/>
+
+       <TextView
+           android:id="@+id/label_gender_tambah"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Gender"
+           android:textColor="@color/black"
+           android:textSize="20sp"
+           app:layout_constraintTop_toBottomOf="@id/input_nik_tambah"
+           app:layout_constraintStart_toStartOf="parent"
+           android:layout_marginTop="40dp"/>
+
+       <LinearLayout
+           android:id="@+id/gender_container_tambah"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           app:layout_constraintTop_toBottomOf="@id/label_gender_tambah">
+
+           <!-- RadioButton Laki-laki -->
+           <RadioButton
+               android:id="@+id/radio_laki_tambah"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Laki-laki"
+               android:layout_marginEnd="8dp"
+               android:textColor="@color/black"/>
+
+           <!-- RadioButton Perempuan -->
+           <RadioButton
+               android:id="@+id/radio_perempuan_tambah"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Perempuan"
+               android:textColor="@color/black"/>
+       </LinearLayout>
+
+       <TextView
+           android:id="@+id/label_alamat_tambah"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="alamat"
+           android:textColor="@color/black"
+           android:textSize="20sp"
+           app:layout_constraintTop_toBottomOf="@id/gender_container_tambah"
+           app:layout_constraintStart_toStartOf="parent"
+           android:layout_marginTop="20dp"/>
+       <EditText
+           android:id="@+id/input_alamat_tambah"
+           android:layout_width="match_parent"
+           android:layout_height="50dp"
+           android:background="@drawable/rounded_grey"
+           android:inputType="text"
+           android:textColor="@color/black"
+           app:layout_constraintTop_toBottomOf="@id/label_alamat_tambah"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           android:layout_marginTop="10dp"/>
+
+       <Button
+           android:id="@+id/btn_simpan_tambah"
+           android:layout_width="match_parent"
+           android:layout_height="60dp"
+           android:text="simpan"
+           android:textColor="@color/white"
+           app:layout_constraintBottom_toBottomOf="parent"
+           />
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
